@@ -1,24 +1,36 @@
 {
   "expo": {
-    "name": "zena-begena-songs",
+    "name": "ዜና በገና — ዝማሬ",
     "slug": "zena-begena-songs",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
-    "ios": {
-      "supportsTablet": true
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#1C1917"
     },
     "android": {
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
-        "foregroundImage": "./assets/android-icon-foreground.png",
-        "backgroundImage": "./assets/android-icon-background.png",
-        "monochromeImage": "./assets/android-icon-monochrome.png"
-      }
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#1C1917"
+      },
+      "package": "com.zenabegena.songs",
+      "minSdkVersion": 21,
+      "compileSdkVersion": 35,
+      "targetSdkVersion": 35,
+      "permissions": []
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.zenabegena.songs"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      "expo-font"
+    ]
   }
 }
