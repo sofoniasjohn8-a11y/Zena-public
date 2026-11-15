@@ -11,6 +11,9 @@ jobs:
     name: Build Android APK
     runs-on: ubuntu-latest
 
+    env:
+      EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -24,14 +27,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Setup EAS
-        uses: expo/expo-github-action@v8
-        with:
-          eas-version: latest
-          packager: npm
-          token: ${{ secrets.EXPO_TOKEN }}
+      - name: Install EAS CLI
+        run: npm install -g eas-cli
 
       - name: Build Android preview APK
         run: eas build --platform android --profile preview --non-interactive
-        env:
-          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
