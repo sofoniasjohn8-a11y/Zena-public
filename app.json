@@ -5,7 +5,8 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "automatic",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": false,
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
@@ -13,7 +14,7 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/icon.png",
         "backgroundColor": "#1C1917"
       },
       "package": "com.zenabegena.songs",
@@ -37,6 +38,6 @@
         "projectId": "f563b528-2560-46ee-9ca4-06fa19e1ae8d"
       }
     },
-    "owner": "ictus-3"
+    "owner": "zena-public"
   }
 }
