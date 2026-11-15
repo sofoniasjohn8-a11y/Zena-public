@@ -158,21 +158,21 @@ function LevelPickerModal({ visible, onSelect, onDismiss }) {
 const lp = StyleSheet.create({
   topDeco:        { alignItems: 'center', paddingTop: 70, paddingBottom: 10 },
   topDecoIcon:    { fontSize: 52, marginBottom: 10 },
-  topDecoTitle:   { fontSize: 26, fontWeight: 'bold', color: '#FCD34D', letterSpacing: 0.5 },
+  topDecoTitle:   { fontSize: 26, fontWeight: 'bold', color: '#FCD34D', letterSpacing: 0.5, fontFamily: 'Nyala' },
   topDecoSub:     { fontSize: 13, color: 'rgba(255,255,255,0.4)', marginTop: 4, letterSpacing: 2 },
   glow:           { height: 1, backgroundColor: 'rgba(99,102,241,0.6)', marginHorizontal: 40, marginTop: 20, marginBottom: 16 },
-  prompt:         { fontSize: 15, color: 'rgba(255,255,255,0.6)', textAlign: 'center', marginBottom: 24 },
+  prompt:         { fontSize: 15, color: 'rgba(255,255,255,0.6)', textAlign: 'center', marginBottom: 24, fontFamily: 'Nyala' },
   cardsWrap:      { paddingHorizontal: 20, gap: 16 },
   card:           { borderRadius: 22, overflow: 'hidden', elevation: 10 },
   cardGrad:       { paddingVertical: 24, paddingHorizontal: 20 },
   cardContent:    { flexDirection: 'row', alignItems: 'center', gap: 16 },
   cardIconCircle: { width: 68, height: 68, borderRadius: 34, alignItems: 'center', justifyContent: 'center' },
   cardLevelNum:   { fontSize: 32, fontWeight: '900', color: '#FFF' },
-  cardTitle:      { fontSize: 24, fontWeight: 'bold', color: '#FFF', marginBottom: 2 },
+  cardTitle:      { fontSize: 24, fontWeight: 'bold', color: '#FFF', marginBottom: 2, fontFamily: 'Nyala' },
   cardSub:        { fontSize: 11, color: 'rgba(255,255,255,0.65)', letterSpacing: 1, marginBottom: 10 },
   cardCatsRow:    { flexDirection: 'row', gap: 6, flexWrap: 'wrap' },
   cardCatPill:    { backgroundColor: 'rgba(255,255,255,0.18)', paddingHorizontal: 10, paddingVertical: 3, borderRadius: 20 },
-  cardCatPillTxt: { fontSize: 11, color: '#FFF', fontWeight: '600' },
+  cardCatPillTxt: { fontSize: 11, color: '#FFF', fontWeight: '600', fontFamily: 'Nyala' },
   cardArrow:      { width: 40, height: 40, borderRadius: 20, alignItems: 'center', justifyContent: 'center' },
   cardArrowTxt:   { fontSize: 22, color: '#FFF', fontWeight: 'bold' },
   cancelBtn:      { marginTop: 32, alignItems: 'center', paddingVertical: 14 },
@@ -248,15 +248,51 @@ const det = StyleSheet.create({
   frameHeaderRow:    { flexDirection: 'row', marginBottom: 10 },
   frameBackBtn:      { paddingHorizontal: 12, paddingVertical: 7, borderRadius: 20, backgroundColor: '#1C1917', borderWidth: 1.5, borderColor: '#C58B12' },
   frameBackTxt:      { fontSize: 13, fontWeight: '700', color: '#FCD34D' },
-  frameSongTitle:    { fontSize: 24, fontWeight: 'bold', color: '#4A1C00', textAlign: 'center', marginBottom: 6 },
-  frameTitleDivider: { height: 2, backgroundColor: '#C58B12', marginHorizontal: '20%', marginBottom: 14, borderRadius: 1 },
-  frameMetaRow:      { flexDirection: 'row', flexWrap: 'wrap', gap: 8, marginBottom: 16, justifyContent: 'center' },
-  frameMetaChip:     { paddingHorizontal: 14, paddingVertical: 6, backgroundColor: '#EEF2FF', borderRadius: 16, borderWidth: 1, borderColor: '#C7D2FE' },
-  frameMetaChipText: { fontSize: 13, color: '#3730A3', fontWeight: '600' },
-  frameSection:      { marginBottom: 20 },
-  frameSectionLabel: { fontSize: 13, fontWeight: '800', color: '#B8860B', textAlign: 'center', letterSpacing: 2, marginBottom: 10 },
-  frameQegnetText:   { fontSize: 16, color: '#1C0A00', lineHeight: 28, fontWeight: '700', textAlign: 'center' },
-  frameLyricsText:   { fontSize: 15, color: '#1C0A00', lineHeight: 28, textAlign: 'center' },
+
+  // Song title — deep brown on parchment
+  frameSongTitle:    {
+    fontSize: 24, fontWeight: 'bold', color: '#4A1C00',
+    textAlign: 'center', fontFamily: 'Nyala',
+    marginBottom: 6, letterSpacing: 1,
+    textShadowColor: 'rgba(197,139,18,0.25)',
+    textShadowOffset: { width: 0, height: 1 },
+    textShadowRadius: 3,
+  },
+
+  frameTitleDivider: {
+    height: 1.5, backgroundColor: '#B8860B',
+    marginHorizontal: '15%', marginBottom: 12, opacity: 0.7,
+  },
+
+  frameMetaRow:      { flexDirection: 'row', flexWrap: 'wrap', gap: 8, justifyContent: 'center', marginBottom: 14 },
+  frameMetaChip:     { paddingHorizontal: 14, paddingVertical: 5, borderRadius: 20, backgroundColor: 'rgba(184,134,11,0.15)', borderWidth: 1.5, borderColor: '#B8860B' },
+  frameMetaChipText: { fontSize: 13, fontWeight: '700', color: '#4A1C00', fontFamily: 'Nyala' },
+
+  frameSection:      { marginBottom: 16 },
+
+  frameSectionLabel: {
+    fontSize: 13, fontWeight: '800', color: '#B8860B',
+    textAlign: 'center', letterSpacing: 2, marginBottom: 10,
+    fontFamily: 'Nyala',
+  },
+
+  // Qegnet — deep navy
+  frameQegnetText:   {
+    fontSize: 24, fontWeight: '900', color: '#1E3A8A',
+    lineHeight: 38, textAlign: 'center',
+    fontFamily: 'Nyala', letterSpacing: 0.5,
+    backgroundColor: 'rgba(30,58,138,0.07)',
+    borderRadius: 10, padding: 12,
+    borderLeftWidth: 3, borderLeftColor: '#1E3A8A',
+  },
+
+  // Lyrics — rich dark brown
+  frameLyricsText:   {
+    fontSize: 17, lineHeight: 34,
+    color: '#2D1B00',
+    fontFamily: 'Nyala', textAlign: 'center',
+    letterSpacing: 0.2,
+  },
 });
 
 // ─── Main Screen ───────────────────────────────────────────────────────────────
@@ -315,47 +351,47 @@ export default function SongScreen({ navigation }) {
             </View>
           </LinearGradient>
 
-          {/* Background image wraps search + list */}
+          {/* Search — above the background image */}
+          <View style={styles.searchWrap}>
+            <Text style={styles.searchIcon}>🔍</Text>
+            <TextInput
+              style={styles.searchInput}
+              placeholder="ርዕስ ወይም ዘማሪ ፈልግ…"
+              placeholderTextColor="rgba(28,10,0,0.4)"
+              value={query}
+              onChangeText={setQuery}
+            />
+            {query.length > 0 && (
+              <TouchableOpacity onPress={() => setQuery('')}>
+                <Text style={styles.clearBtn}>✕</Text>
+              </TouchableOpacity>
+            )}
+          </View>
+
+          {/* Category chips — above the background image */}
+          <View style={styles.catRow}>
+            {availableCats.map(c => {
+              const active = filterCat === c;
+              return (
+                <TouchableOpacity
+                  key={c}
+                  style={[styles.catChip,
+                    active
+                      ? { backgroundColor: '#B8860B', borderColor: '#B8860B' }
+                      : { backgroundColor: 'rgba(255,255,255,0.9)', borderColor: 'rgba(184,134,11,0.4)' }
+                  ]}
+                  onPress={() => setFilterCat(c)}
+                >
+                  {active && <Text style={styles.catChipIcon}>🎵 </Text>}
+                  <Text style={[styles.catTxt, { color: active ? '#FFF' : '#1C0A00' }]}>{c}</Text>
+                </TouchableOpacity>
+              );
+            })}
+          </View>
+
+          {/* Background image wraps only the song list */}
           <ImageBackground source={LIST_BG} style={{ flex: 1 }} resizeMode="stretch">
-            <View style={{ flex: 1, paddingTop: SCREEN_HEIGHT * 0.22 }}>
-
-              {/* Search */}
-              <View style={styles.searchWrap}>
-                <Text style={styles.searchIcon}>🔍</Text>
-                <TextInput
-                  style={styles.searchInput}
-                  placeholder="ርዕስ ወይም ዘማሪ ፈልግ…"
-                  placeholderTextColor="rgba(28,10,0,0.4)"
-                  value={query}
-                  onChangeText={setQuery}
-                />
-                {query.length > 0 && (
-                  <TouchableOpacity onPress={() => setQuery('')}>
-                    <Text style={styles.clearBtn}>✕</Text>
-                  </TouchableOpacity>
-                )}
-              </View>
-
-              {/* Category chips */}
-              <View style={styles.catRow}>
-                {availableCats.map(c => {
-                  const active = filterCat === c;
-                  return (
-                    <TouchableOpacity
-                      key={c}
-                      style={[styles.catChip,
-                        active
-                          ? { backgroundColor: '#B8860B', borderColor: '#B8860B' }
-                          : { backgroundColor: 'rgba(255,255,255,0.8)', borderColor: 'rgba(184,134,11,0.4)' }
-                      ]}
-                      onPress={() => setFilterCat(c)}
-                    >
-                      {active && <Text style={styles.catChipIcon}>🎵 </Text>}
-                      <Text style={[styles.catTxt, { color: active ? '#FFF' : '#1C0A00' }]}>{c}</Text>
-                    </TouchableOpacity>
-                  );
-                })}
-              </View>
+            <View style={{ flex: 1, paddingTop: SCREEN_HEIGHT * 0.06 }}>
 
               {/* Song list */}
               <FlatList
@@ -419,20 +455,21 @@ const styles = StyleSheet.create({
   backBtn:   { width: 36, height: 36, alignItems: 'center', justifyContent: 'center',
     backgroundColor: 'rgba(255,255,255,0.15)', borderRadius: 18 },
   backTxt:   { fontSize: 20, color: '#FFF', fontWeight: 'bold' },
-  heroTitle: { fontSize: 20, fontWeight: 'bold', color: '#FFF' },
-  heroSub:   { fontSize: 12, color: '#94A3B8', marginTop: 2 },
+  heroTitle: { fontSize: 22, fontWeight: 'bold', color: '#FFF' },
+  heroSub:   { fontSize: 14, color: '#94A3B8', marginTop: 2 },
 
-  searchWrap:  { flexDirection: 'row', alignItems: 'center', backgroundColor: 'rgba(255,255,255,0.9)',
+  searchWrap:  { flexDirection: 'row', alignItems: 'center', backgroundColor: '#FFF',
     borderRadius: 16, paddingHorizontal: 14, height: 48, marginHorizontal: 16,
-    marginBottom: 6, borderWidth: 1.5, borderColor: 'rgba(184,134,11,0.5)' },
+    marginBottom: 6, borderWidth: 1.5, borderColor: 'rgba(184,134,11,0.5)',
+    marginTop: 8 },
   searchIcon:  { fontSize: 16, marginRight: 10 },
-  searchInput: { flex: 1, fontSize: 15, color: '#1C0A00', paddingVertical: 0 },
+  searchInput: { flex: 1, fontSize: 15, color: '#1C0A00', paddingVertical: 0, fontFamily: 'Nyala' },
   clearBtn:    { fontSize: 14, paddingLeft: 8, color: '#B8860B' },
 
-  catRow:     { flexDirection: 'row', flexWrap: 'wrap', paddingHorizontal: 16, paddingBottom: 8, paddingTop: 2, gap: 8 },
+  catRow:     { flexDirection: 'row', flexWrap: 'wrap', paddingHorizontal: 16, paddingBottom: 10, paddingTop: 2, gap: 8, backgroundColor: '#F5F5F4' },
   catChip:    { flexDirection: 'row', alignItems: 'center', paddingHorizontal: 14, paddingVertical: 7, borderRadius: 22, borderWidth: 1.5 },
   catChipIcon:{ fontSize: 12 },
-  catTxt:     { fontSize: 14, fontWeight: '700' },
+  catTxt:     { fontSize: 14, fontWeight: '700', fontFamily: 'Nyala' },
 
   songCard:    { flexDirection: 'row', alignItems: 'center', backgroundColor: 'rgba(255,255,255,0.95)',
     borderRadius: 14, marginBottom: 8, padding: 10, marginHorizontal: 2,
@@ -441,14 +478,14 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.15, shadowRadius: 3 },
   songThumb:   { width: 58, height: 58, borderRadius: 12, marginRight: 12 },
   songContent: { flex: 1, paddingRight: 8 },
-  songTitle:   { fontSize: 17, fontWeight: 'bold', color: '#1C0A00', marginBottom: 3 },
-  songSinger:  { fontSize: 13, color: '#44403C', marginBottom: 2 },
-  songQegnet:  { fontSize: 13, color: '#1E3A8A', fontWeight: '800' },
+  songTitle:   { fontSize: 17, fontWeight: 'bold', color: '#1C0A00', marginBottom: 3, fontFamily: 'Nyala' },
+  songSinger:  { fontSize: 13, color: '#44403C', marginBottom: 2, fontFamily: 'Nyala' },
+  songQegnet:  { fontSize: 13, color: '#1E3A8A', fontWeight: '800', fontFamily: 'Nyala' },
   songRight:   { alignItems: 'flex-end' },
   catBadge:    { paddingHorizontal: 10, paddingVertical: 4, borderRadius: 10, borderWidth: 1.5 },
-  catBadgeTxt: { fontSize: 11, fontWeight: '700' },
+  catBadgeTxt: { fontSize: 11, fontWeight: '700', fontFamily: 'Nyala' },
 
   emptyBox:    { alignItems: 'center', paddingTop: 80 },
-  emptyTitle:  { fontSize: 20, fontWeight: 'bold', marginBottom: 8, color: '#0F172A' },
-  emptyHint:   { fontSize: 14, textAlign: 'center', paddingHorizontal: 32, lineHeight: 22, color: '#64748B' },
+  emptyTitle:  { fontSize: 20, fontWeight: 'bold', marginBottom: 8, color: '#0F172A', fontFamily: 'Nyala' },
+  emptyHint:   { fontSize: 14, textAlign: 'center', paddingHorizontal: 32, lineHeight: 22, color: '#64748B', fontFamily: 'Nyala' },
 });

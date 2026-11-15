@@ -129,8 +129,8 @@ const styles = StyleSheet.create({
   },
   statsItem:    { flex: 1, alignItems: 'center', paddingHorizontal: 2 },
   statsDivider: { width: 1, backgroundColor: COLORS.border, marginVertical: 4 },
-  statsValue:   { fontSize: 20, fontWeight: '800', marginBottom: 4, fontFamily: 'Nyala' },
-  statsLabel:   { fontSize: 10, color: COLORS.textSecondary, fontWeight: '600', textAlign: 'center', fontFamily: 'Nyala' },
+  statsValue:   { fontSize: 24, fontWeight: '800', marginBottom: 4, fontFamily: 'Nyala' },
+  statsLabel:   { fontSize: 13, color: COLORS.textSecondary, fontWeight: '600', textAlign: 'center', fontFamily: 'Nyala' },
 
   // 3. About card
   aboutCard: {
@@ -138,8 +138,8 @@ const styles = StyleSheet.create({
     borderRadius: 14, borderWidth: 1, borderColor: COLORS.border,
     padding: 16, elevation: 1,
   },
-  aboutTitle: { fontSize: 15, fontWeight: 'bold', color: COLORS.textPrimary, marginBottom: 8, fontFamily: 'Nyala' },
-  aboutText:  { fontSize: 13, color: COLORS.textSecondary, lineHeight: 22, fontFamily: 'Nyala' },
+  aboutTitle: { fontSize: 18, fontWeight: 'bold', color: COLORS.textPrimary, marginBottom: 10, fontFamily: 'Nyala' },
+  aboutText:  { fontSize: 16, color: COLORS.textSecondary, lineHeight: 26, fontFamily: 'Nyala' },
 
   // 4. Instrument section
   section:       {
@@ -152,16 +152,16 @@ const styles = StyleSheet.create({
     paddingHorizontal: 14, paddingVertical: 12,
     borderBottomWidth: 1, borderBottomColor: COLORS.border,
   },
-  sectionTitle:  { fontSize: 14, fontWeight: 'bold', color: COLORS.textPrimary, fontFamily: 'Nyala' },
+  sectionTitle:  { fontSize: 17, fontWeight: 'bold', color: COLORS.textPrimary, fontFamily: 'Nyala' },
   sectionLink:   { paddingHorizontal: 10, paddingVertical: 4, backgroundColor: '#FEF3C7', borderRadius: 20 },
-  sectionLinkTxt:{ fontSize: 11, fontWeight: 'bold', color: '#92400E', fontFamily: 'Nyala' },
+  sectionLinkTxt:{ fontSize: 14, fontWeight: 'bold', color: '#92400E', fontFamily: 'Nyala' },
   instrGrid:     { flexDirection: 'row', flexWrap: 'wrap', padding: 10, gap: 10 },
   instrTile:     {
     width: '47%', backgroundColor: '#FFF8F0',
     borderRadius: 12, borderWidth: 1, borderColor: '#FDE68A', overflow: 'hidden',
   },
-  instrImg:  { width: '100%', height: 100 },
-  instrMeta: { paddingVertical: 8, paddingHorizontal: 10 },
-  instrName: { fontSize: 14, fontWeight: 'bold', color: COLORS.textPrimary, marginBottom: 2, fontFamily: 'Nyala' },
-  instrDesc: { fontSize: 11, color: COLORS.textSecondary, fontWeight: '600', fontFamily: 'Nyala' },
+  instrImg:  { width: '100%', height: 110 },
+  instrMeta: { paddingVertical: 10, paddingHorizontal: 10 },
+  instrName: { fontSize: 17, fontWeight: 'bold', color: COLORS.textPrimary, marginBottom: 3, fontFamily: 'Nyala' },
+  instrDesc: { fontSize: 14, color: COLORS.textSecondary, fontWeight: '600', fontFamily: 'Nyala' },
 });
