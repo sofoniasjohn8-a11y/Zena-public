@@ -6,6 +6,7 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { COLORS } from '../constants/colors';
 import HomeScreen from '../screens/HomeScreen';
 import SongScreen from '../screens/SongScreen';
+import ContactScreen from '../screens/ContactScreen';
 
 const Tab = createBottomTabNavigator();
 const HomeStack = createNativeStackNavigator();
@@ -43,9 +44,23 @@ function SongStackNav() {
   );
 }
 
+const ContactStack = createNativeStackNavigator();
+function ContactStackNav() {
+  return (
+    <ContactStack.Navigator screenOptions={HEADER_OPTS}>
+      <ContactStack.Screen
+        name="Contact"
+        component={ContactScreen}
+        options={{ title: 'ያግኙን' }}
+      />
+    </ContactStack.Navigator>
+  );
+}
+
 const TAB_ITEMS = [
-  { name: 'HomeTab', label: 'ዋና ገጽ',  icon: '🏠' },
-  { name: 'SongsTab', label: 'ዝማሬዎች', icon: '🎵' },
+  { name: 'HomeTab',    label: 'ዋና ገጽ',  icon: '🏠' },
+  { name: 'SongsTab',  label: 'ዝማሬዎች', icon: '🎵' },
+  { name: 'ContactTab', label: 'ያግኙን',   icon: '📬' },
 ];
 
 function CustomTabBar({ state, navigation }) {
@@ -87,7 +102,7 @@ const styles = StyleSheet.create({
   tab:             { flex: 1, alignItems: 'center', justifyContent: 'center', paddingTop: 8, height: 56 },
   activeIndicator: { position: 'absolute', top: 0, width: 32, height: 3, borderRadius: 2, backgroundColor: COLORS.navActive },
   tabIcon:         { fontSize: 20, marginBottom: 2 },
-  tabLabel:        { fontSize: 10, textAlign: 'center' },
+  tabLabel:        { fontSize: 10, textAlign: 'center', fontFamily: 'Nyala' },
 });
 
 export default function AppNavigator() {
@@ -96,8 +111,9 @@ export default function AppNavigator() {
       tabBar={props => <CustomTabBar {...props} />}
       screenOptions={{ headerShown: false }}
     >
-      <Tab.Screen name="HomeTab"  component={HomeStackNav} />
-      <Tab.Screen name="SongsTab" component={SongStackNav} />
+      <Tab.Screen name="HomeTab"    component={HomeStackNav}    />
+      <Tab.Screen name="SongsTab"   component={SongStackNav}    />
+      <Tab.Screen name="ContactTab" component={ContactStackNav} />
     </Tab.Navigator>
   );
 }
